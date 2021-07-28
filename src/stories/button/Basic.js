@@ -1,33 +1,44 @@
 import React from 'react';
-
-import { grommet, Box, Button, Grommet } from 'grommet';
-
-export const Basic = props => (
-  <Grommet theme={grommet}>
-    <Box align="center" pad="medium">
-      <Button label="Default" onClick={() => {}} {...props} />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button label="Anchor" href="#" />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button disabled label="Disabled" onClick={() => {}} {...props} />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button primary label="Primary" onClick={() => {}} {...props} />
-    </Box>
-    <Box align="center" pad="medium">
-      <Button
-        primary
-        label="Active Primary"
-        active
-        onClick={() => {}}
-        {...props}
-      />
-    </Box>
-  </Grommet>
-);
+import { Button } from 'grommet';
 
 export default {
-  title: 'Controls/Button/Basic',
+  title: 'Controls/Button',
+  component: Button,
+  args: {
+    label: 'Button Label',
+    reverse: false,
+  },
+  argTypes: {
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+      default: {
+        value: 'medium',
+      },
+    },
+  },
+};
+
+const Template = (args) => <Button {...args} />;
+
+export const Default = Template.bind({});
+
+export const Large = Template.bind({});
+Large.args = {
+  size: 'large',
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  size: 'medium',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+};
+
+export const Reverse = Template.bind({});
+Reverse.args = {
+  reverse: true,
 };
