@@ -10,6 +10,6 @@ export default {
   },
 };
 
-const Template = (args) => <GrommetSelect {...args} width="100%" />;
+const Template = (args) => <GrommetSelect {...args} />;
 
 export const Select = Template.bind({});

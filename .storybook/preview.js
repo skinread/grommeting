@@ -1,9 +1,10 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { Grommet, grommet } from 'grommet';
+import { Grommet } from 'grommet';
+import { Theme } from '../src/themes/heyhubble';
 
 addDecorator(Story => (
-  <Grommet theme={grommet}>
+  <Grommet theme={Theme}>
     <Story />
   </Grommet>
 ));
