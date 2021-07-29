@@ -4,10 +4,10 @@ module.exports = {
     '../src/stories/**/*.@(js|jsx|ts|tsx)'
   ],
   addons: [
+    'storybook-addon-paddings',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    '@storybook/preset-create-react-app',
   ],
   typescript: {
     reactDocgen: 'react-docgen-typescript',

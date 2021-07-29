@@ -1,3 +1,13 @@
+import React from 'react';
+import { addDecorator } from '@storybook/react';
+import { Grommet, grommet } from 'grommet';
+
+addDecorator(Story => (
+  <Grommet theme={grommet}>
+    <Story />
+  </Grommet>
+));
+
 export const parameters = {
   layout: 'fullscreen',
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,7 +23,10 @@ export const parameters = {
   //     order: ['All'],
   //   },
   // },
-}
+  paddings: {
+    default: 'Medium',
+  },
+};
 
 export const globalTypes = {
   theme: {

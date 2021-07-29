@@ -9,6 +9,7 @@ export default {
     reverse: false,
   },
   argTypes: {
+    label: {},
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
