@@ -12,13 +12,13 @@ module.exports = {
   core: {
     builder: 'storybook-builder-vite',
   },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      compilerOptions: {
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
-    },
-  },
+  // typescript: {
+  //   reactDocgen: 'react-docgen-typescript',
+  //   reactDocgenTypescriptOptions: {
+  //     compilerOptions: {
+  //       allowSyntheticDefaultImports: false,
+  //       esModuleInterop: false,
+  //     },
+  //   },
+  // },
 };
