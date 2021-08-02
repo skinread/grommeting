@@ -9,13 +9,16 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
   ],
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      compilerOptions: {
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
-    },
+  core: {
+    builder: 'storybook-builder-vite',
   },
+  // typescript: {
+  //   reactDocgen: 'react-docgen-typescript',
+  //   reactDocgenTypescriptOptions: {
+  //     compilerOptions: {
+  //       allowSyntheticDefaultImports: false,
+  //       esModuleInterop: false,
+  //     },
+  //   },
+  // },
 };

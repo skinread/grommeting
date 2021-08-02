@@ -5,33 +5,51 @@
   "engines": {
     "node": ">=14"
   },
+  "scripts": {
+    "start": "npm run serve:storybook",
+    "start:vite": "vite",
+    "build:storybook": "build-storybook -s public",
+    "build:vite": "tsc && vite build",
+    "serve:storybook": "start-storybook -p 6006 -s public --no-manager-cache",
+    "serve:vite": "vite preview"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
-  },
-  "scripts": {
-    "start": "npm run storybook",
-    "cra:start": "react-scripts start",
-    "cra:build": "react-scripts build",
-    "cra:test": "react-scripts test",
-    "storybook": "start-storybook -p 6006 -s public --no-manager-cache",
-    "build-storybook": "build-storybook -s public"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "@storybook/addon-a11y": "^6.3.6",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
     "@storybook/node-logger": "^6.3.6",
     "@storybook/react": "^6.3.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
     "grommet": "^2.17.4",
+    "grommet-icons": "^4.6.0",
     "polished": "^4.1.3",
     "storybook-addon-paddings": "^4.2.1",
+    "storybook-builder-vite": "^0.0.12",
     "styled-components": "^5.3.0",
-    "typescript": "^4.1.6"
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }
 }
