@@ -5,7 +5,7 @@ export default {
   title: 'Controls/Inputs/Checkbox',
   component: CheckBox,
   args: {
-    label: 'Radio button label',
+    label: 'Checkbox label',
   },
 };
 

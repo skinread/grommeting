@@ -10,7 +10,7 @@
     "start:vite": "vite",
     "build:storybook": "build-storybook -s public",
     "build:vite": "tsc && vite build",
-    "serve:storybook": "start-storybook -p 6006 -s public --no-manager-cache",
+    "serve:storybook": "start-storybook -p 6006 -s public",
     "serve:vite": "vite preview"
   },
   "dependencies": {
@@ -51,5 +51,6 @@
         }
       }
     ]
-  }
+  },
+  "packageManager": "yarn@3.0.0"
 }
